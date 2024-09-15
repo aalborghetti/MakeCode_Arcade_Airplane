@@ -1,0 +1,22 @@
+{
+    "w5Q:[QG,yl6_SidH4X],": {
+        "data": "hwQYABAAAAAAAADwDwAAAAAAACwPAAAA/P/PIg8AAABMJPLCD8D8AMxEIswPL/IAwEwkwvwi8gAAzCzCLCLyAADALMIiIvIPAMAiwiJC/P8AwCLCIkT//wAvIiJM9P//AC8iIkL/L/IALyIiIvzM/PAsIiIi8sIPz0wimyLy/wDPTCKRIvIAAC9MJBEi8gAALy+0ESLyAAD/z5sZIvIAAP/Ambki8gAAAACcKyIPAAAAAMAiIg8AAAAAACzyAAAAAAAAwA8AAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "aereo"
+    },
+    "image1": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAACAhAAAAAAAAICEAAAAAAAAgIQAAAAAAADAxAAAAAAAAMjECAAAAAAASEQIAAAAAABIRAwAAAAAAExEDAAAAAAATEQMAAAAAABMRAwAAAAAAMjECAAAAAAAgIgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "proiettile"
+    },
+    "image2": {
+        "data": "hwQYABAAAAAAAADADwAAAAAAAIz4AAAAAADAiIgPAAAAAJyLiA8AAP/AmbmI+AAA/8+bGYj4AACPj7YRiPgAAI9shhGI+AAAz2yIkYj4AADPbIibiPj/APCMiIiI+MgPAI+IiIj8zPwAj4iIaP+P+ACPiIhs9v//AMCIyIhm//8AwIjIiGj8/wDAjMiIiPgPAMyMyIyI+ADAbIbI/Ij4AMxmiMwPj/gAbIb4yA/A/AD8/8+IDwAAAAAAAIwPAAAAAAAA8A8AAAA=",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "myImage"
+    },
+    "*": {
+        "mimeType": "image/x-mkcd-f4",
+        "dataEncoding": "base64",
+        "namespace": "myImages"
+    }
+}
