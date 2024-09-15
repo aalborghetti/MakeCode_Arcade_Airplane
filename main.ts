@@ -14,6 +14,7 @@ let enemy1: Sprite = null
 let projectile_p1: Sprite = null
 let Player1: Sprite = null
 Player1 = sprites.create(assets.image`aereo`, SpriteKind.Player)
+Player1.setPosition(15, 55)
 scene.setBackgroundImage(img`
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
     ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
@@ -143,6 +144,6 @@ game.onUpdate(function () {
 })
 game.onUpdateInterval(2000, function () {
     enemy1 = sprites.create(assets.image`myImage`, SpriteKind.Enemy)
-    enemy1.setPosition(160, randint(10, 110))
+    enemy1.setPosition(160, randint(10, 100))
     enemy1.setVelocity(-50, 0)
 })
