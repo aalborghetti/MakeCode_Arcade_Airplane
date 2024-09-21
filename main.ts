@@ -1,20 +1,25 @@
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     projectile_p1 = sprites.createProjectileFromSprite(assets.image`proiettile`, Player1, 70, 0)
-})
-sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSprite) {
-    sprites.destroy(enemy1, effects.fire, 100)
-    info.changeLifeBy(-1)
+    music.play(music.melodyPlayable(music.pewPew), music.PlaybackMode.UntilDone)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-    sprites.destroy(enemy1, effects.fire, 100)
+    sprites.destroy(otherSprite, effects.fire, 50)
     sprites.destroy(projectile_p1)
+    music.play(music.melodyPlayable(music.smallCrash), music.PlaybackMode.UntilDone)
     info.changeScoreBy(1)
+})
+sprites.onOverlap(SpriteKind.Player, SpriteKind.Enemy, function (sprite, otherSprite) {
+    sprites.destroy(otherSprite, effects.fire, 50)
+    music.play(music.melodyPlayable(music.bigCrash), music.PlaybackMode.UntilDone)
+    info.changeLifeBy(-1)
 })
 let enemy1: Sprite = null
 let projectile_p1: Sprite = null
 let Player1: Sprite = null
 Player1 = sprites.create(assets.image`aereo`, SpriteKind.Player)
 Player1.setPosition(15, 55)
+Player1.setStayInScreen(true)
+controller.moveSprite(Player1)
 scene.setBackgroundImage(img`
     8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888b888886888888588888888888888b8888888888888
     8888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888b888886888888588888888888888b8888888888888
@@ -139,9 +144,6 @@ scene.setBackgroundImage(img`
     `)
 info.setLife(3)
 info.setScore(0)
-game.onUpdate(function () {
-    controller.moveSprite(Player1)
-})
 game.onUpdateInterval(2000, function () {
     enemy1 = sprites.create(assets.image`myImage`, SpriteKind.Enemy)
     enemy1.setPosition(160, randint(10, 100))
